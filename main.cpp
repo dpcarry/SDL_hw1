@@ -1,5 +1,5 @@
 /**
-* Author: [Your name here]
+* Author: Pingchuan Dong
 * Assignment: Simple 2D Scene
 * Date due: 2023-09-20, 11:59pm
 * I pledge that I have completed this assignment without
