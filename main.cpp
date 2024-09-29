@@ -204,16 +204,14 @@ void update()
     g_x_offset = RADIUS * glm::cos(g_angle);
     g_y_offset = RADIUS * glm::sin(g_angle);
     g_ryu_matrix = glm::translate(g_ryu_matrix, INIT_POS_RYU);
+    g_ken_matrix = glm::translate(g_ryu_matrix, glm::vec3(g_x_offset, g_y_offset, 0.0f));
     g_ryu_matrix = glm::rotate(g_ryu_matrix,
         g_rotation_ryu.y,
         glm::vec3(0.0f, 1.0f, 0.0f));
-    g_ryu_matrix = glm::scale(g_ryu_matrix, INIT_SCALE_RYU);
-
-
-    g_ken_matrix = glm::translate(g_ken_matrix, glm::vec3(g_x_offset, g_y_offset, 0.0f));
     g_ken_matrix = glm::rotate(g_ken_matrix,
         g_rotation_ken.y,
         glm::vec3(0.0f, 1.0f, 0.0f));
+    g_ryu_matrix = glm::scale(g_ryu_matrix, INIT_SCALE_RYU);
     g_ken_matrix = glm::scale(g_ken_matrix, glm::vec3(scale_factor, scale_factor, 1.0f));
 }
 
